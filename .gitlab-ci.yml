@@ -1,0 +1,28 @@
+docker-build-master:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/johnollhorn/data-science" .
+    - docker push "index.docker.io/johnollhorn/data-science"
+  only:
+    - main
+
+docker-build:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/johnollhorn/data-science:$CI_COMMIT_REF_SLUG" .
+    - docker push "index.docker.io/johnollhorn/data-science:$CI_COMMIT_REF_SLUG"
+  except:
+    - main
+    - develop
