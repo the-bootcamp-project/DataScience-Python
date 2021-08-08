@@ -1,0 +1,42 @@
+docker-build-master:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/johnollhorn/datascience-python" .
+    - docker push "index.docker.io/johnollhorn/datascience-python"
+  only:
+    - main
+
+docker-build-develop:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/johnollhorn/datascience-python:develop" .
+    - docker push "index.docker.io/johnollhorn/datascience-python:develop"
+  only:
+    - develop
+
+docker-build:
+  # Official docker image.
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u "$CI_REGISTRY_USER" --password-stdin $CI_REGISTRY
+  script:
+    - docker build --pull -t "index.docker.io/johnollhorn/datascience-python:$CI_COMMIT_REF_SLUG" .
+    - docker push "index.docker.io/johnollhorn/datascience-python:$CI_COMMIT_REF_SLUG"
+  except:
+    - main
+    - develop
