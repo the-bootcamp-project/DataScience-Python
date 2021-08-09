@@ -28,14 +28,14 @@ ENV PATH /home/bootcamp/.local/bin:/usr/local/bin/python3:/usr/local/bin/pip3:$P
 
 WORKDIR /home/bootcamp
 
-RUN python3 -m pip install --upgrade --user pip && \
-    python3 -m pip install --user \
+RUN python3 -m pip install --upgrade --user \
+        pip \
+        requests \
         kaggle \
         fasttext \
         pandas \
-        # Dependencies
-        pytest \
-        requests \
+        # Development Dependencies
+        pytest pylint \
         # Recommended dependencies
         numexpr bottleneck h5py \
         # Visualization
