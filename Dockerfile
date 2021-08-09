@@ -11,7 +11,7 @@ RUN apt update && \
     apt upgrade -y && apt install -y \
         build-essential gcc make cmake \
         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-        python3 python3-pip python3-psycopg2 pkg-config \
+        python3 python3-pip python3-psycopg2 pkg-config libhdf5-100 libhdf5-dev \
         zip wget curl llvm git sudo
 
 RUN apt autoremove -y
