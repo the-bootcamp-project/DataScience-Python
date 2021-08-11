@@ -11,7 +11,7 @@ RUN apt update && \
     apt upgrade -y && apt install -y \
         build-essential gcc make cmake \
         libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-        python3 python3-pip python3-psycopg2 \
+        python3 python3-pip \
         zip wget curl git sudo
 
 RUN apt autoremove -y
@@ -33,7 +33,7 @@ RUN python3 -m pip install --upgrade --user pip \
         kaggle \
         fasttext \
         # Development Dependencies
-        pytest pylint
+        mypy pylint pytest bandit python-semantic-release
 
 # RUN python3 -m pip install --upgrade --user pandas \
 #         # Recommended dependencies
