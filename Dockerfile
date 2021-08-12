@@ -53,6 +53,11 @@ RUN python3 -m pip install --upgrade --user pip \
 #         # Access data in the cloud
 #         # fsspec gcsfs pandas-gbq s3fs
 
+RUN mkdir -p /tmp/semver/ && \
+    git clone https://github.com/fsaintjacques/semver-tool.git /tmp/semver/ && \
+    cp /tmp/semver/semver /usr/local/bin/ && \
+    chmod +x bootcamp:bootcamp /usr/local/bin/semver
+
 RUN mkdir -p /home/bootcamp/.kaggle
 
 # Uncommand if run Docker with kaggle.json file
