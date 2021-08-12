@@ -28,7 +28,8 @@ ENV PATH /home/bootcamp/.local/bin:/usr/local/bin/python3:/usr/local/bin/pip3:$P
 
 WORKDIR /home/bootcamp
 
-RUN python3 -m pip install --upgrade --user pip \
+RUN python3 -m pip install --upgrade --user pip && \
+    python3 -m pip install --upgrade --user \
         requests \
         kaggle \
         fasttext \
