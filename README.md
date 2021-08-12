@@ -2,6 +2,14 @@
 
 <h1 align="center">Run DataScience with Python in Docker (Step-by-Step)</h1>
 
+<div align="center">
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/tbcp/datascience-python?style=for-the-badge)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/tbcp/datascience-python?style=for-the-badge)
+![Docker Pulls](https://img.shields.io/docker/pulls/tbcp/datascience-python?style=for-the-badge)
+![Docker Stars](https://img.shields.io/docker/stars/tbcp/datascience-python?style=for-the-badge)
+![Bootcamp Project: DataSourcing with Python](https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge)
+</div>
+
 ## 👉 About 👈
 
 ### 😎 Built With 😎
