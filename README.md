@@ -3,12 +3,11 @@
 <h1 align="center">Run DataScience with Python in Docker (Step-by-Step)</h1>
 
 <div align="center">
-    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/datascience-python?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Image Size (latest by date)" target="_blank"><img src="https://img.shields.io/docker/image-size/tbcp/datascience-python?style=for-the-badge" alt="Docker Image Size (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Pulls" target="_blank"><img src="https://img.shields.io/docker/pulls/tbcp/datascience-python?style=for-the-badge" alt="Docker Pulls" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Stars" target="_blank"><img src="https://img.shields.io/docker/stars/tbcp/datascience-python?style=for-the-badge" alt="Docker Stars" /></a>
-    <a href="https://bootcamp-project.com/" title="Docker Image Version (latest by date)" target="_blank"><img src="https://img.shields.io/docker/v/tbcp/datascience-python?style=for-the-badge" alt="Docker Image Version (latest by date)" /></a>
-    <a href="https://bootcamp-project.com/" title="Bootcamp Project: DataScience with Python in Docker" target="_blank"><img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" alt="Bootcamp Project: datascience-python Host in Docker" /></a>
+<img src="https://img.shields.io/docker/v/tbcp/datascience-python?style=for-the-badge" />
+<img src="https://img.shields.io/docker/image-size/tbcp/datascience-python?style=for-the-badge" />
+<img src="https://img.shields.io/docker/pulls/tbcp/datascience-python?style=for-the-badge" />
+<img src="https://img.shields.io/docker/stars/tbcp/datascience-python?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Bootcamp-Project-blue?style=for-the-badge" />
 </div>
 
 ## 👉 About 👈
