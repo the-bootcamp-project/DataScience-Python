@@ -1,0 +1,4 @@
+[submodule "docs"]
+	path = docs
+	url = https://gitlab.com/the-bootcamp-project/containers/docs.git
+	branch = main
