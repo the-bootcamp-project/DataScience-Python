@@ -40,6 +40,8 @@ SOFTWARE.
 
 - [Homepage][Repo_Homepage]
 - [Repository][Repo_URL]
+- [Documentation][Repo_Docs]
+- [Issues][Repo_Issues]
 
 **Minimum Viable Product**: *What is what we want?*
 
@@ -58,10 +60,28 @@ SOFTWARE.
 
 ## 🚀 Getting Started 🚀
 
+_For more examples, please refer to the [Documentation][Repo_Docs]_
+
 ### 🤩 Usage 🤩
 
+**... as local Copy**
+
 ```bash
-# Example
+docker pull tbcp/datascience-python
+```
+
+**... as Base Image**
+
+```dockerfile
+FROM tbcp/datascience-python
+
+USER bootcamp
+```
+
+**... as GitLab-CI Image**
+
+```yml
+image: "tbcp/datascience-python"
 ```
 
 ## ⭐️ Features ⭐️
@@ -124,7 +144,7 @@ See [LICENSE](LICENSE) for more information.
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
 
-[Repo_Homepage]: https://containers.bootcamp-project.com/#/topic/python_datascience
+[Repo_Homepage]: https://hub.docker.com/r/tbcp/python_datascience
 [Repo_URL]: https://gitlab.com/the-bootcamp-project/containers/datascience-python
 [Repo_Docs]: https://containers.bootcamp-project.com/#/topic/python_datascience
 [Repo_Issues]: https://gitlab.com/the-bootcamp-project/containers/datascience-python/-/issues
