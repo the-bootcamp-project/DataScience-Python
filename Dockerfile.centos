@@ -14,8 +14,7 @@ RUN sudo yum install gcc -y
 
 RUN python3 -m pip install --upgrade --user \
     requests \
-    kaggle \
-    fasttext
+    kaggle
 
 RUN python3 -m pip install --upgrade --user pandas
 #   # Recommended dependencies
