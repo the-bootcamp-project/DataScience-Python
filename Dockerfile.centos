@@ -10,6 +10,8 @@ ENV KAGGLE_PROXY=${KAGGLE_PROXY}
 
 USER bootcamp
 
+RUN sudo yum install gcc -y
+
 RUN python3 -m pip install --upgrade --user \
     requests \
     kaggle \
