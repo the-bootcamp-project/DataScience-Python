@@ -1,7 +1,11 @@
+stages:
+  - Building
+  - Deployment
+
 docker-build-debian:
   # Official docker image.
   image: docker:latest
-  stage: build
+  stage: Building
   services:
     - docker:dind
   before_script:
@@ -15,7 +19,7 @@ docker-build-debian:
 docker-build-centos:
   # Official docker image.
   image: docker:latest
-  stage: build
+  stage: Building
   services:
     - docker:dind
   before_script:
@@ -25,3 +29,12 @@ docker-build-centos:
     - docker push "index.docker.io/tbcp/datascience-python:centos"
   only:
     - main
+
+pages:
+    stage: Deployment
+    script:
+        - mkdir ./public
+        - cp -r README.md public/ && cp -r USAGE.md public/
+    artifacts:
+        paths: [public]
+        expire_in: 1 mins
